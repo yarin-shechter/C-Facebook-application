@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C77781B4-8E4E-4E15-AD01-FB0FAE859D35}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FacebookApplication</RootNamespace>
+    <AssemblyName>FacebookApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Facebook">
+      <HintPath>.\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="FbGraphApiWrapper">
+      <HintPath>.\FbGraphApiWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Iterator Pattern\IPostIterator.cs" />
+    <Compile Include="Observer Pattern\IBlastFromThePastButtonObserver.cs" />
+    <Compile Include="Observer Pattern\IFriendsTriviaButtonObserver.cs" />
+    <Compile Include="Observer Pattern\IHomeButtonObserver.cs" />
+    <Compile Include="Observer Pattern\ILogoutButtonObserver.cs" />
+    <Compile Include="Observer Pattern\IProfileButtonObserver.cs" />
+    <Compile Include="HW2 Pattern Implementations\FBPageBuilder.cs" />
+    <Compile Include="HW2 Pattern Implementations\FBPageBuilderFactory.cs" />
+    <Compile Include="HW2 Pattern Implementations\FBPageComposer.cs" />
+    <Compile Include="HW2 Pattern Implementations\FBPageWrapperForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HW2 Pattern Implementations\FBPageWrapperForm.Designer.cs">
+      <DependentUpon>FBPageWrapperForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HW2 Pattern Implementations\HomePageBuilder.cs" />
+    <Compile Include="HW2 Pattern Implementations\IFBPageBuilder.cs" />
+    <Compile Include="HW2 Pattern Implementations\ProfilePageBuilder.cs" />
+    <Compile Include="HW2 Pattern Implementations\FriendsSidebar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HW2 Pattern Implementations\FriendsSidebar.Designer.cs">
+      <DependentUpon>FriendsSidebar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HW2 Pattern Implementations\UserDescription.cs" />
+    <Compile Include="Iterator Pattern\PostAggregate.cs" />
+    <Compile Include="UI\blastFromThePast\BlastFromThePastManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\blastFromThePast\PastPhotoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\blastFromThePast\PastPhotoForm.Designer.cs">
+      <DependentUpon>PastPhotoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\blastFromThePast\RandomPastPhotoGenerator.cs" />
+    <Compile Include="UI\constants\eQuestionSubject.cs" />
+    <Compile Include="Server\PossibleAnswers.cs" />
+    <Compile Include="Server\PossibleQuestions.cs" />
+    <Compile Include="Server\Question.cs" />
+    <Compile Include="Server\TriviaQuestionGenerator.cs" />
+    <Compile Include="UI\constants\eFBPageType.cs" />
+    <Compile Include="UI\constants\eFeedType.cs" />
+    <Compile Include="UI\basicApplication\FBPost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\basicApplication\FBPost.Designer.cs">
+      <DependentUpon>FBPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\blastFromThePast\PastYearSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\blastFromThePast\PastYearSelectionForm.Designer.cs">
+      <DependentUpon>PastYearSelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\friendsTrivia\FriendsTriviaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\friendsTrivia\FriendsTriviaForm.Designer.cs">
+      <DependentUpon>FriendsTriviaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\basicApplication\PhotoGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\basicApplication\PhotoGrid.Designer.cs">
+      <DependentUpon>PhotoGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\basicApplication\PostCreator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\basicApplication\PostCreator.Designer.cs">
+      <DependentUpon>PostCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\basicApplication\PostFeed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\basicApplication\PostFeed.Designer.cs">
+      <DependentUpon>PostFeed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\basicApplication\ProfileHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\basicApplication\ProfileHeader.Designer.cs">
+      <DependentUpon>ProfileHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\basicApplication\TopBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\basicApplication\TopBar.designer.cs">
+      <DependentUpon>TopBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\basicApplication\LoginPageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIManager.cs" />
+    <Compile Include="Utils\AppSettingsManager.cs" />
+    <Compile Include="Utils\DataFetcher.cs" />
+    <Compile Include="Visitor Pattern\GlowMaker.cs" />
+    <Compile Include="Visitor Pattern\IColorable.cs" />
+    <EmbeddedResource Include="HW2 Pattern Implementations\FBPageWrapperForm.resx">
+      <DependentUpon>FBPageWrapperForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HW2 Pattern Implementations\FriendsSidebar.resx">
+      <DependentUpon>FriendsSidebar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\blastFromThePast\PastPhotoForm.resx">
+      <DependentUpon>PastPhotoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\basicApplication\FBPost.resx">
+      <DependentUpon>FBPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\blastFromThePast\PastYearSelectionForm.resx">
+      <DependentUpon>PastYearSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\friendsTrivia\FriendsTriviaForm.resx">
+      <DependentUpon>FriendsTriviaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\basicApplication\PhotoGrid.resx">
+      <DependentUpon>PhotoGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\basicApplication\PostCreator.resx">
+      <DependentUpon>PostCreator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\basicApplication\PostFeed.resx">
+      <DependentUpon>PostFeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\basicApplication\ProfileHeader.resx">
+      <DependentUpon>ProfileHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\basicApplication\TopBar.resx">
+      <DependentUpon>TopBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\basicApplication\LoginPageForm.resx">
+      <DependentUpon>LoginPageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIManager.resx">
+      <DependentUpon>UIManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\FacebookApplication.HW2_additions.UserDescription.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
