@@ -1,5 +1,5 @@
 # C# Facebook application
-This C# project implements a Facebook application (using the Facebook developer API) that allows logging into your account and viewing various facebook updates.
+This C# project implements a Facebook application (using the Facebook developer API) that allows logging into your account and viewing various facebook updates by presenting an interactive newsfeed.
 In attempting to practice design patterns, three specific patterns are implemented: Visitor, Observer and Iterator - diagrams are provided below.
 ## Class diagrams for the patterns (visitor, observer, iterator):
 ![image](https://github.com/yarin-shechter/C-Facebook-application/assets/48433514/6d1e77e4-d902-4fca-bcc8-d0cd69c5012a)
